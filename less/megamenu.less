@@ -1,0 +1,790 @@
+/*
+ * 6. MEGA MENU CSS
+ * Description: Mega Menu CSS
+ */
+ 
+.vd_mega-menu-wrapper{
+    width: 100%;
+	position: relative;
+	z-index: 3;
+	
+	.vd_mega-menu{
+	    float:left;
+    	.mega-ul, .mega-li{
+    	    margin:0;
+	        padding:0;    	    
+    	}
+    	.mega-li{
+    	    list-style: none;
+    	}
+    	> .mega-ul{
+            > li.one-icon, > li.profile{
+            	padding:13px 7px 14px;                
+            }
+            
+            > li.one-big-icon, >li.one-icon{
+                > .mega-link{
+            	    display: block;
+                    height: 36px;
+                    line-height: 30px;
+                    width: 36px;  
+                    text-align:center;
+                    padding:0;
+                    margin:0;
+                    overflow:hidden;                    
+                    .border-radius(30px);                   
+            	}  
+            }
+            > li.one-big-icon {
+                padding:14px 4px 13px;   
+                > .mega-link{
+                font-size: 24px;
+                    > .mega-image{
+                        margin-left:5px;
+                        margin-right:5px;
+                    }
+                    > .badge{
+                        right:-4px;
+                        top:5px;
+                    }
+                }
+                .open-left:before{
+                    right: 11px;
+                }      
+                .open-right:before{
+                    right:auto;
+                    left:11px;
+                }    
+            }
+            > li.profile{
+            	margin-left:15px;                
+                .mega-image{ 
+                    float:left;
+                }
+                .mega-name{
+                    display:block;
+                    float:left;
+                    margin-left:10px;
+                    margin-top:5px;
+                }                
+            }
+            .mega-image {
+                height: 36px;
+                line-height: 30px;
+                width: 36px; 
+                img{
+                    .border-radius(30px); 
+                    vertical-align:top;
+                }
+            }              
+            > li.one-icon{
+                > .mega-link{
+                    border: 2px solid #EEE;
+                    .mega-icon{
+                        font-size:16px;
+                    }                      
+                }     	
+                .mega-link:hover, .mega-link.open    {
+                    background-color:@navbar_tabs_menu_color !important;
+                    color: @main_color; 
+                }                  
+            }
+	        > .mega-li{
+            	float: left;
+            	position: relative;
+            	margin-left:5px;
+            	padding:18px 7px 20px;
+            	height: @header_height;
+            	> a{
+            	    padding: 0;
+                    color:@top_mega_menu_color;
+            	}
+            	> a:hover, > a:focus{
+            	    background:none;
+            	}            	       	
+            	.btn{
+            	    padding: 6px 15px;
+            	}
+                .btn-lg{
+                    padding: 11px 19px;
+                }
+                .btn-sm{
+                    padding: 5px 10px;
+                }
+                .btn-xs{
+                    font-size: 11px;
+                    padding: 4px 8px;
+                }
+                .caret{
+            	    border-top-color: #FFFFFF;
+            	    border-bottom-color: #FFFFFF;
+            	}              
+                .badge {
+                    position: absolute;
+                    right: 4px;
+                    top: 4px;
+                }                                     
+    	    } // mega-li  
+    	    
+    	    li.hover-trigger:hover >.hover-target{
+    	            display:block !important;
+    	    }
+	    } // mega-ul
+    } // .vd_mega-menu
+} // .vd_mega-menu-wrapper
+
+/* for horizontal menu */
+.vd_mega-menu-wrapper.horizontal-menu{
+    z-index: 6;
+    .vd_mega-menu > .mega-ul  {
+        > .mega-li {
+            padding: 8px 13px;
+            height: 42px;
+            margin-top:10px;
+            margin-bottom:10px;
+            border-radius:4px;
+            > a{
+                font-size:14px;
+            }    
+        }
+        > .mega-li:hover, > .mega-li.active {
+            background : rgba(0,0,0,.4);
+            color: #FFFFFF;
+        }
+    }    
+}
+
+// 2nd level menu
+.vd_mega-menu-content:before{
+	-moz-border-color: none;
+	border-color: transparent transparent @mega_menu_border_top_color;
+	border-image: none;
+	border-style: solid;
+	border-width: 5px;
+	content: "";
+	display: block;
+	height: 0;
+	opacity: 1;
+	width: 0;  
+	position:absolute;
+	top:-12px;
+}
+
+.vd_mega-menu-content{
+	padding-top: 5px;
+	padding-bottom: 15px;
+	position: absolute;
+	top: 100%;
+	display:none;  
+	background-color: #FFF;
+    .box-shadow(0 1px 1px rgba(0, 0, 0, 0.05)); 
+	border-top: 3px solid @mega_menu_border_top_color;
+	z-index: 5;
+    .line{
+        border-top:1px solid #EEE;
+        margin-top:5px !important;
+        margin-bottom:5px !important;
+        padding:0 !important;        
+    }	
+    .closing{
+        margin-bottom:-15px;
+    }
+}
+.vd_mega-menu-content.no-top{
+    border-top:none;
+}
+.vd_mega-menu-content.no-top:before{
+    border:none;    
+}
+
+// mega menu content
+.vd_mega-menu-content .child-menu{
+    position:relative;
+    padding:0;
+    color:@mega_menu_child_text_color;
+    letter-spacing: .3px;
+    a{
+        color:@mega_menu_child_link_color;  
+    }
+    .title{
+        background:@mega_menu_border_top_color;
+        color:#FFF;
+        margin-top:-5px;
+        padding:0 10px 3px;
+        .vd_panel-menu{
+            .entypo-icon{
+                font-size:18px;
+                line-height:26px;        
+            }
+            .smaller-font{
+                font-size:14px;
+            }    
+        }
+    }
+    .content{
+        padding: 5px 10px;
+    }
+}
+
+
+.closing{
+    font-size:11.4px;                            
+    background:#F5F5F5 !important;
+    position:relative;
+    a{
+        color:#999 !important;
+        display:block;
+        padding: 3px 10px 5px;
+    }
+    a:hover{
+        color:@main_color !important;
+    }
+}  
+
+.open-top{
+    top:auto;
+    bottom:106%;
+}
+.open-top:before{
+    display:none !important;
+}
+
+.light-top-menu{
+   .vd_mega-menu-wrapper{
+       	.vd_mega-menu{
+            > .mega-ul > .mega-li{           	  
+                .mega-link, .one-icon, .mega-name{
+            	    border-color:#707e77;
+            	    color:#707e77;
+                }
+            }
+       	}
+   }
+   .vd_mega-menu-wrapper.horizontal-menu{
+       	.vd_mega-menu{
+            > .mega-ul > .mega-li{
+            	> a{
+            	    color:#707e77;
+            	}    
+            }
+            .mega-ul > .mega-li:hover, .mega-ul > .mega-li.active {
+                background : @main_color;
+                > a {                    
+                    color: #FFFFFF;
+                }
+            }            
+       	}    
+   }
+   .vd_menu-search{
+        background: #333333;
+        color:#EEEEEE;
+        .vd_menu-search-text{
+            background: #333333;  
+            color:#EEEEEE;            
+        }
+   }
+}
+
+/* Specific Menu Color */
+//Mega Menu: Menu Action
+.menu-action-icon.vd_green:hover{
+    background: @green !important;
+    color:@white !important;
+}
+.menu-action-icon.vd_red:hover{
+    background: @red !important;
+    color:@white !important;
+} 
+.menu-action-icon.vd_yellow:hover{
+    background: @green !important;
+    color:@white !important;
+}
+.menu-action-icon.vd_orange:hover{
+    background: @red !important;
+    color:@white !important;
+} 
+.menu-action-icon.vd_blue:hover{
+    background: @green !important;
+    color:@white !important;
+}
+
+
+/* Mega Menu Width */
+
+// Large Screen
+.width-lg-1{
+    width:@width_1;
+}
+.width-lg-2{
+    width:@width_2;
+}
+.width-lg-3{
+    width:@width_3;
+}
+.width-lg-4{
+    width:@width_4;
+} 
+.width-lg-5{
+    width:@width_5;
+} 
+.width-lg-6{
+    width:@width_6;
+}
+.width-lg-full{
+    width:@width_full;
+}
+// Medium Screen
+.width-md-1{
+    width:@width_1;
+}
+.width-md-2{
+    width:@width_2;
+}
+.width-md-3{
+    width:@width_3;
+}
+.width-md-4{
+    width:@width_4;
+} 
+.width-md-5{
+    width:@width_5;
+}
+.width-md-6{
+    width:@width_6;
+} 
+.width-md-full{
+    width:@width_full;
+}
+// Small Screen
+.width-sm-1{
+    width:@width_1;
+}
+.width-sm-2{
+    width:@width_2;
+}
+.width-sm-3{
+    width:@width_3;
+}
+.width-sm-4{
+    width:@width_4;
+} 
+.width-sm-5{
+    width:@width_5;
+}
+.width-sm-6{
+    width:@width_6;
+}
+.width-sm-full{
+    width:@width_full;
+}
+// Extra Small Screen
+.width-xs-1{
+    width:@width_1;
+}
+.width-xs-2{
+    width:@width_2;
+}
+.width-xs-3{
+    width:@width_3;
+}
+.width-xs-4{
+    width:@width_4;
+}
+.width-xs-5{
+    width:@width_5;
+}
+.width-xs-6{
+    width:@width_6;
+}
+.width-xs-full{
+    width:@width_full;
+}
+
+/* Height */
+// Large Screen
+.height-lg-auto .list-wrapper > li{
+    height:auto;
+}
+.height-lg-1 .list-wrapper > li{
+    height:@height_1;
+}
+.height-lg-2 .list-wrapper > li{
+    height:@height_2;
+}
+.height-lg-3 .list-wrapper > li{
+    height:@height_3;
+} 
+.height-lg-4 .list-wrapper > li{
+    height:@height_4;
+} 
+.height-lg-5 .list-wrapper > li{
+    height:@height_5;
+} 
+.height-lg-6 .list-wrapper > li{
+    height:@height_6;
+}   
+// Medium Screen
+.height-md-auto .list-wrapper > li{
+    height:auto;
+}
+.height-md-1 .list-wrapper > li{
+    height:@height_1;
+}
+.height-md-2 .list-wrapper > li{
+    height:@height_2;
+}
+.height-md-3 .list-wrapper > li{
+    height:@height_3;
+} 
+.height-md-4 .list-wrapper > li{
+    height:@height_4;
+} 
+.height-md-5 .list-wrapper > li{
+    height:@height_5;
+} 
+.height-md-6 .list-wrapper > li{
+    height:@height_6;
+} 
+// Small Screen
+.height-sm-auto .list-wrapper > li{
+    height:auto;
+}
+.height-sm-1 .list-wrapper > li{
+    height:@height_1;
+}
+.height-sm-2 .list-wrapper > li{
+    height:@height_2;
+}
+.height-sm-3 .list-wrapper > li{
+    height:@height_3;
+} 
+.height-sm-4 .list-wrapper > li{
+    height:@height_4;
+} 
+.height-sm-5 .list-wrapper > li{
+    height:@height_5;
+} 
+.height-sm-6 .list-wrapper > li{
+    height:@height_6;
+} 
+
+// Extra Small Screen 
+.height-xs-auto .list-wrapper > li{
+    height:auto;
+}
+.height-xs-1 .list-wrapper > li{
+    height:@height_1;
+}
+.height-xs-2 .list-wrapper > li{
+    height:@height_2;
+}
+.height-xs-3 .list-wrapper > li{
+    height:@height_3;
+} 
+.height-xs-4 .list-wrapper > li{
+    height:@height_4;
+} 
+.height-xs-5 .list-wrapper > li{
+    height:@height_5;
+} 
+.height-xs-6 .list-wrapper > li{
+    height:@height_6;
+}
+
+/* Grid Column */
+// Large Screen
+.column-lg-1{
+    .column-1();       
+}  
+.column-lg-2{
+    .column-2();         
+}
+.column-lg-3{
+    .column-3();    
+} 
+.column-lg-4{
+    .column-4();       
+} 
+.column-lg-5{
+    .column-5();   
+}
+.column-lg-6{
+    .column-6();     
+} 
+// Medium Screen
+.column-md-1{
+    .column-1();       
+}  
+.column-md-2{
+    .column-2();         
+}
+.column-md-3{
+    .column-3();    
+} 
+.column-md-4{
+    .column-4();       
+} 
+.column-md-5{
+    .column-5();   
+}
+.column-md-6{
+    .column-6();     
+} 
+// Small Screen
+.column-sm-1{
+    .column-1();       
+}  
+.column-sm-2{
+    .column-2();         
+}
+.column-sm-3{
+    .column-3();    
+} 
+.column-sm-4{
+    .column-4();       
+} 
+.column-sm-5{
+    .column-5();   
+}
+.column-sm-6{
+    .column-6();     
+} 
+// Extra Small Screen
+.column-xs-1{
+    .column-1();       
+}  
+.column-xs-2{
+    .column-2();         
+}
+.column-xs-3{
+    .column-3();    
+} 
+.column-xs-4{
+    .column-4();       
+} 
+.column-xs-5{
+    .column-5();   
+}
+.column-xs-6{
+    .column-6();     
+} 
+
+/* Left , Right , Center Position */
+// Large Screen
+.left-lg{
+    .left-mega-menu();
+}
+.right-lg{
+    .right-mega-menu();     
+}
+.center-lg-1{
+    .center-pos(@width_1,@width_extra);
+}
+.center-lg-2{
+    .center-pos(@width_2,@width_extra);
+}
+.center-lg-3{
+    .center-pos(@width_3,@width_extra);
+}
+.center-lg-4{
+    .center-pos(@width_4,@width_extra);
+}
+.center-lg-5{
+    .center-pos(@width_5,@width_extra);
+}
+.center-lg-6{
+    .center-pos(@width_6,@width_extra);
+}
+.center-lg-full{
+    .center-pos(@width_full,@width_extra);
+}
+// Medium Screen
+.left-md{
+    .left-mega-menu();   
+}
+.right-md{
+    .right-mega-menu();       
+}
+.center-md-1{
+    .center-pos(@width_1,@width_extra);
+}
+.center-md-2{
+    .center-pos(@width_2,@width_extra);
+}
+.center-md-3{
+    .center-pos(@width_3,@width_extra);
+}
+.center-md-4{
+    .center-pos(@width_4,@width_extra);
+}
+.center-md-5{
+    .center-pos(@width_5,@width_extra);
+}
+.center-md-6{
+    .center-pos(@width_6,@width_extra);
+}
+.center-md-full{
+    .center-pos(@width_full,@width_extra);
+}
+// Small Screen
+.left-sm{
+    .left-mega-menu();   
+}
+.right-sm{
+    .right-mega-menu();        
+}
+.center-sm-1{
+    .center-pos(@width_1,@width_extra);
+}
+.center-sm-2{
+    .center-pos(@width_2,@width_extra);
+}
+.center-sm-3{
+    .center-pos(@width_3,@width_extra);
+}
+.center-sm-4{
+    .center-pos(@width_4,@width_extra);
+}
+.center-sm-5{
+    .center-pos(@width_5,@width_extra);
+}
+.center-sm-6{
+    .center-pos(@width_6,@width_extra);
+}
+.center-sm-5{
+    .center-pos(@width_5,@width_extra);
+}
+.center-sm-6{
+    .center-pos(@width_6,@width_extra);
+}
+.center-sm-full{
+    .center-pos(@width_full,@width_extra);
+}
+// Extra Small Screen
+.left-xs{
+    .left-mega-menu();     
+}
+.right-xs{
+    .right-mega-menu();     
+}
+.center-xs-1{
+    .center-pos(@width_1,@width_extra);
+}
+.center-xs-2{
+    .center-pos(@width_2,@width_extra);
+}
+.center-xs-3{
+    .center-pos(@width_3,@width_extra);
+}
+.center-xs-4{
+    .center-pos(@width_4,@width_extra);
+}
+.center-xs-5{
+    .center-pos(@width_5,@width_extra);
+}
+.center-xs-6{
+    .center-pos(@width_6,@width_extra);
+}
+.center-xs-full{
+    .center-pos(@width_full,@width_extra);
+}
+
+.width-full{
+    width:@width_full;
+}
+.parent-width-full{ // class for parent with child .width-full
+    position:static !important;                
+}
+.mgbt-lg-0{
+    margin-bottom:0 !important;
+}
+.mgbt-lg-5{
+    margin-bottom:5px !important;
+}
+.mgbt-lg-10{
+    margin-bottom:10px !important;
+}
+.mgbt-lg-15{
+    margin-bottom:15px !important;
+}
+.mgbt-lg-20{
+    margin-bottom:20px !important;
+}
+.mgbt-md-0{
+    margin-bottom:0 !important;
+}
+.mgbt-md-5{
+    margin-bottom:5px !important;
+}
+.mgbt-md-10{
+    margin-bottom:10px !important;
+}
+.mgbt-md-15{
+    margin-bottom:15px !important;
+}
+.mgbt-md-20{
+    margin-bottom:20px !important;
+}
+.mgbt-sm-0{
+    margin-bottom:0 !important;
+}
+.mgbt-sm-5{
+    margin-bottom:5px !important;
+}
+.mgbt-sm-10{
+    margin-bottom:10px !important;
+}
+.mgbt-sm-15{
+    margin-bottom:15px !important;
+}
+.mgbt-sm-20{
+    margin-bottom:20px !important;
+}
+.mgbt-xs-0{
+    margin-bottom:0 !important;
+}
+.mgbt-xs-5{
+    margin-bottom:5px !important;
+}
+.mgbt-xs-10{
+    margin-bottom:10px !important;
+}
+.mgbt-xs-15{
+    margin-bottom:15px !important;
+}
+.mgbt-xs-20{
+    margin-bottom:20px !important;
+}
+.mgtp--10{
+    margin-top:-10px !important;
+}
+.mgtp--5{
+    margin-top:-5px !important;
+}
+.mgtp-0{
+    margin-top:0px !important;
+}
+.mgtp-5{
+    margin-top:5px !important;
+}
+.mgtp-10{
+    margin-top:10px !important;
+}
+.mgtp-15{
+    margin-top:15px !important;
+}
+.mgtp-20{
+    margin-top:20px !important;
+}
+
+.open-right{
+    top:-8px;
+    left:100%;
+}
+.open-left{
+    top:-8px;
+    right:100%;
+}
+.open-right:before, .open-left:before{
+    border:none;
+}

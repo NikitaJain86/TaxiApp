@@ -1,0 +1,641 @@
+/*
+ * 2. PLUGINS CSS
+ * Description: Overwrite Imported Plugins CSS
+ */
+ 
+ /* Jquery Vector Map  */
+.jvectormap-label {
+    position: absolute;
+    display: none;
+    border: solid 1px #CDCDCD;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #292929;
+    color: white;
+    font-size: smaller;
+    padding: 3px;
+}
+
+.jvectormap-zoomin, .jvectormap-zoomout {
+    position: absolute;
+    left: 15px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    border-radius: 24px;
+    background: #292929;
+    padding: 3px;
+    color: white;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    line-height: 16px;
+    text-align: center;
+    font-size: 28px;
+}
+
+.jvectormap-zoomin {
+    top: 10px;
+}
+
+.jvectormap-zoomout {
+    top: 38px;
+}
+.dark-widget{
+    .flot-x-axis, .flot-y-axis{
+	    .flot-tick-label{
+	        color:#FFF;	        
+	    }
+    }
+}
+
+/*  Scroll  */
+[data-rel^="scroll"]{
+    max-height:400px;
+}
+.mCSB_container{
+    margin-right:0;
+}
+.mCSB_scrollTools {
+    .mCSB_dragger .mCSB_dragger_bar{
+        background:@main_color;
+        .opacity(.7);
+    }    
+    .mCSB_dragger:hover, .mCSB_dragger:active, .mCSB_dragger.mCSB_dragger_onDrag {
+        .mCSB_dragger_bar{
+            background:@grey;
+        }    
+    }   
+    .mCSB_draggerRail{
+        background: none;
+    }
+}
+
+
+/* Auto Complete & Tags */
+
+div.tagsinput span.tag{
+    background:lighten(@green,5%);
+    border-color: lighten(@green,5%);
+    color:#FFF;
+}
+div.tagsinput span.tag a{
+    color:#FFF;
+}
+
+.ui-autocomplete{
+    max-height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;     // prevent horizontal scrollbar 
+    background:#FFF;
+    border:1px solid #CCC;
+    .ui-autocomplete-category {
+        font-weight: bold;
+        padding: .2em .4em;
+        margin: .8em 0 .2em;
+        line-height: 1.5;
+    }    
+    .ui-autocomplete-category:hover{
+        background:none;
+    }
+    li{
+        padding:5px !important;
+        margin:0 !important;
+    }
+    li:hover{
+        background-color:#F5F5F5;
+        cursor:pointer;
+    }
+    a{
+        color:#666;
+        padding:0 !important;
+        margin:0 !important;        
+    }
+    .ui-state-focus{
+        background-color:#F5F5F5;
+    }    
+    .ui-menu-item{
+        a{
+            clear:both;
+        }
+    }
+    .menu-icon{
+        display:block;
+        float:left;
+        text-align:center;
+        font-size:24px;
+        width:40px;
+        height:40px;
+        line-height:40px;
+        margin-right:12px;
+    }
+    .menu-text{
+        display:block;
+        margin-left:55px;
+        text-transform: none;
+        padding-right:15px; 
+        padding-top:5px;
+        padding-bottom:5px;
+    }
+    .menu-info{
+        display:block;
+        font-size:11.4px;
+        font-style: italic;
+        color:#939ba2;                                 
+        text-transform: capitalize;    
+    }        
+} 
+
+/*  JQuery UI Slider  */
+.ui-slider{
+	background:#EEEEEE;	
+    .ui-slider-handle{
+    	background:#1FAE66; 
+    	width:24px;
+    	height:24px;
+    }	
+    .ui-slider-handle:hover{
+    	cursor:pointer;
+    }  
+    a{
+    	transition: none;
+    }  
+    .ui-slider-range{
+    	background:#39515F;	
+    }    
+}
+.ui-slider-horizontal{
+	height:0.6em;
+    .ui-slider-handle{
+    	top:-0.6em;
+    }	
+}
+.ui-slider-vertical{
+	width: 0.6em;
+    .ui-slider-handle{
+    	left:-0.6em;
+    }	
+}
+.ui-slider, .ui-slider .ui-slider-handle, .ui-slider .ui-slider-range{
+	border-radius: 30px;
+}
+.ui-slider-primary .ui-slider-handle{
+	background:#1FAE66; 		
+}
+.ui-slider-warning .ui-slider-handle{
+	background:#F89C2C; 		
+}
+.ui-slider-info .ui-slider-handle{
+	background:#23709E; 		
+}
+.ui-slider-danger .ui-slider-handle{
+	background:#F85D2C ; 		
+}
+
+/*  Bootstrap Switch  */
+.bootstrap-switch{
+    border:none; border-radius:30px; background:#1FAE66;
+    .bootstrap-switch-handle-on.bootstrap-switch-primary, .bootstrap-switch-handle-off.bootstrap-switch-primary{
+        background:none ;
+        margin-left:5px;        
+    }
+    .bootstrap-switch-label{
+        background:#EEEEEE;     
+        border-radius: 30px !important;
+        height: 30px;
+        margin: 5px 2px 5px 6px;
+        width: 30px;
+    }
+    .bootstrap-switch-handle-on.bootstrap-switch-default, .bootstrap-switch-handle-off.bootstrap-switch-default{
+		background:none;
+		color:#FFF;        
+    }
+}
+//Bootstrap Switch Size
+.bootstrap-switch-large .bootstrap-switch-label{
+	width:36px; height:36px; margin-left:8px;
+}
+.bootstrap-switch.bootstrap-switch-large .bootstrap-switch-handle-on, .bootstrap-switch.bootstrap-switch-large .bootstrap-switch-handle-off, .bootstrap-switch.bootstrap-switch-large .bootstrap-switch-label{
+	padding-top:6px;
+}
+.bootstrap-switch-small .bootstrap-switch-label{
+	width: 24px; height:24px; margin-left:3px;
+}
+.bootstrap-switch-mini .bootstrap-switch-label{
+	width: 18px; height:18px; margin-left:5px;
+}		
+.bootstrap-switch.bootstrap-switch-focused{
+	box-shadow:none;
+}
+
+
+// Bootstrap Switch Color    
+
+.bootstrap-switch-inverse .bootstrap-switch-label{
+	background: #1fae66;
+}	
+.bootstrap-switch-inverse .bootstrap-switch-handle-on.bootstrap-switch-primary{
+	color: #1fae66;
+}	
+.bootstrap-switch-red, .bootstrap-switch-inverse.bootstrap-switch-red .bootstrap-switch-label{
+	background:#F85D2C;
+}
+.bootstrap-switch-inverse.bootstrap-switch-red .bootstrap-switch-handle-on.bootstrap-switch-primary{
+	color:#F85D2C;
+}
+.bootstrap-switch-yellow, .bootstrap-switch-inverse.bootstrap-switch-yellow .bootstrap-switch-label{
+	background:#F89C2C;
+}
+.bootstrap-switch-inverse.bootstrap-switch-yellow .bootstrap-switch-handle-on.bootstrap-switch-primary{
+	color:#F89C2C;
+}	
+.bootstrap-switch-blue, .bootstrap-switch-inverse.bootstrap-switch-blue .bootstrap-switch-label{
+	background:#67B8CB;
+}
+.bootstrap-switch-inverse.bootstrap-switch-blue .bootstrap-switch-handle-on.bootstrap-switch-primary{
+	color:#67B8CB;
+}
+.bootstrap-switch.bootstrap-switch-off{
+	background:#CCC;
+}
+.bootstrap-switch-inverse{
+	background: #39515F;
+}
+.bootstrap-switch-inverse.bootstrap-switch-off .bootstrap-switch-label{
+	background:#EEEEEE;
+}
+
+
+
+
+
+
+/*  JQuery Datepicker */
+
+.ui-datepicker{
+    background:@dark_blue;
+    z-index: 1500 !important;
+    width: 280px;    
+    padding:0;
+    border-radius: 4px;
+    .box-shadow( 0px 0px 3px 0px rgba(0,0,0,0.2));  
+}
+
+.ui-datepicker .ui-datepicker-header{
+    background: rgba(0,0,0,.2);
+    margin: 0;
+    padding: 10px;
+    font-size: 14px;
+}
+.ui-datepicker .ui-datepicker-title{
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color:@green;
+    font-weight:bold;
+    select{
+        color: @dark_blue;
+    }
+}
+.ui-datepicker .ui-state-hover {
+    background: rgba(0,0,0,.2);   
+}
+.ui-datepicker a{
+    color: @green;
+}
+.ui-datepicker .ui-state-disabled{
+    color: #CCC;
+}
+.ui-datepicker td span, .ui-datepicker td a{
+    text-align:center;
+    border-radius:4px;
+}
+.ui-datepicker .ui-state-highlight{
+    background: rgba(0,0,0,.2);  
+}
+.ui-datepicker .ui-datepicker-prev{
+    left: 8px;
+    background:url(../img/sprites.png) 4px 3px  no-repeat;
+}
+.ui-datepicker .ui-datepicker-next{
+    right: 8px;
+    background:url(../img/sprites.png) -20px 3px no-repeat;    
+}
+.ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{
+    top: 12px;
+    border: 2px solid #FFF;
+    .border-radius(20px);
+    .opacity(.6);
+    height:20px;
+    width:20px;
+}
+.ui-datepicker .ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-next:hover{
+    .opacity(1);
+}
+.ui-datepicker .ui-datepicker-calendar{
+    width:260px;
+    margin-left:10px;
+    margin-bottom:10px;
+}
+.ui-datepicker th{
+    color:#FFFFFF;
+    .opacity(.5);
+    text-transform: uppercase;
+    .box-shadow(0 -1px 0 rgba(255, 255, 255, 0.3) inset);
+}
+.ui-datepicker .ui-corner-all:hover{
+    cursor:pointer;
+}
+.ui-datepicker .ui-datepicker-buttonpane button{
+    border:none;
+    color:#FFF;
+    background:none;
+}
+.ui-datepicker .ui-datepicker-buttonpane button:hover{
+    background-color:rgba(0,0,0,.3);
+}
+.ui-datepicker .ui-datepicker-title select{
+    padding:0;
+    margin-bottom:0;
+}
+[data-datepicker]:hover{
+    cursor:pointer;
+}
+
+
+/*  Bootstrap Daterange Picker */
+
+.daterangepicker select.hourselect, .daterangepicker select.minuteselect, .daterangepicker select.ampmselect{
+    width:60px;
+}
+
+
+/*  Colorpicker  */
+
+.colorpicker {
+    .colorpicker_hex, .colorpicker_field{
+        input{
+            padding:0;
+            border:none;
+            width:auto;
+            margin-top:2px;
+            margin-right:2px;
+        }
+    }
+}
+.color-input{
+    padding: 4px 8px;
+    font-size:20px;
+}
+
+
+/*  Data Tables  */
+
+.table.dataTable{ 
+    thead th{
+        border-bottom:2px solid #777777;
+    }
+    tr.odd td.sorting_1{
+        background-color:#EFEFEF;
+    }
+    tr.even td.sorting_1{
+        background-color:#F5F5F5;
+    }
+}
+.table.dataTable.no-footer{
+    border-bottom-color: #DDDDDD;
+}
+
+
+/*  JQuery UI  */
+
+.ui-drop-placeholder{
+    border: 2px dashed #DADADA;
+    background-color: #FAFAFA;
+}
+
+
+/* Full Calendar */
+
+.fc{
+    a{
+        transition: none;
+    }
+    .fc-border-separate tr.fc-last th, .fc-border-separate tr.fc-last td {
+        border-bottom-width:2px;
+    }
+    .fc-day-header{
+        padding:5px;
+        text-transform: uppercase;
+        border-color: #FFFFFF;
+        border-bottom-color:#F0F0F0;
+    }
+    .fc-day{
+//        background-color: #FAFAFA;
+        border-color: #F0F0F0;
+    }
+    .fc-day:hover{
+        background-color:#F5F5F5;
+    }
+    .fc-other-month{
+        background-color: #FAFAFA;
+    }
+    .fc-state-highlight{
+        background-color:#F8F1DE;
+    }
+    .fc-event{
+        background-color:@alert_blue !important;
+        border-color:@alert_blue !important;
+        border-top: 1px solid @blue !important;
+        color:#31708F !important;
+        .fc-event-title{
+            padding-left:5px;
+            padding-right:5px;
+        }
+    }
+    .fc-header-title h2{
+        color: @main_color;
+        font-size: 32px;
+        margin: 25px 0 10px 15px;
+    }
+    .fc-grid .fc-day-number {
+        padding: 0 7px;
+    } 
+    .fc-button{
+        background:none;
+        margin-right:5px;        
+        box-shadow:none;
+        text-shadow:none;
+    }
+    .fc-button-today{
+        border:none;
+    }
+    .fc-button-prev, .fc-button-next{
+        .border-radius(40px);
+        border-color: @grey;
+        color: @grey;
+        border-radius: 40px;
+        height: 26px;
+        line-height: 22px;
+        padding-left: 0;
+        padding-right: 1px;
+        width: 26px;        
+    }
+    .fc-button:hover{
+        background:@grey;
+        color:@white;
+    }
+    .fc-state-disabled:hover{
+        background:none;
+        color: #333333;
+    }
+    .fc-sun{
+        color:#F85D2C;
+    }
+}
+
+#fullcalendar .fc-header{
+    .fc-header-left{
+        .fc-button{
+        	margin-top:30px;
+        }
+	  .fc-button-prev{
+		margin-left:20px;
+	    }        
+    }
+    .fc-header-right{
+	   .fc-button{
+    		border-radius: 4px;
+    		border:none;
+    		color: #1FAE66;
+    		position:absolute;
+	    }
+	   .fc-button:hover{
+    		background: #1FAE66;		
+    		color:#FFFFFF;
+	    }
+	   .fc-state-disabled{
+		    color:#666666;
+	    }
+	   .fc-state-disabled:hover{
+    		color:#666666;
+    		background:none;
+	    }
+	   .fc-state-active{
+		    background: #1FAE66;		
+		    color:#FFFFFF;	
+	    }
+	   .fc-button-today{
+		    top:55px;
+		    right:15px;
+	    }
+	   .fc-button-month, .fc-button-agendaWeek, .fc-button-agendaDay{
+		    top: 20px;
+		} 
+	   .fc-button-month{
+		    right:115px;
+	    }
+	   .fc-button-agendaWeek{
+		    right:60px;
+	    }
+	   .fc-button-agendaDay{
+		    right:15px;
+	    }	                
+    }    
+}
+
+
+
+
+/*  Sparkline Tooltip  */
+
+.jqstooltip{ 
+   display:block;
+   min-width:40px;
+   padding: 4px;   
+   min-height:25px!important;
+}
+
+
+/*  PNotify Notification  */
+
+.ui-pnotify-icon, .ui-pnotify-icon span{
+    font-size: 20px;
+    margin-right: 0.25em;
+}
+.ui-pnotify-closer, .ui-pnotify-sticker{
+    position:absolute;
+    top:4px;
+    font-size:18px;
+}
+.ui-pnotify-closer{
+    right:8px;
+}
+.ui-pnotify-sticker{
+    right: 28px;
+}
+.ui-pnotify-title{
+    font-weight:bold;
+    margin-bottom:0.6em;
+}
+// specific content list class 
+.ui-pnotify .content-image .menu-icon{
+    font-size: 36px;
+}
+
+
+/*  Intro JS  */
+
+.introjs-helperNumberLayer{
+    border:none;
+    line-height:16px;
+    background: @red;
+}
+.introjs-tooltip{
+    padding:10px 15px 15px;
+    min-width:250px;
+}
+.introjs-button{
+    color:@white !important;
+    background:@main_color !important;
+    border-color:@main_color !important;
+    text-shadow:none;
+}
+.introjs-button:hover{
+    background:darken(@main_color,5%) none !important;
+    border-color:darken(@main_color,5%) !important;
+    color: @white !important;
+}
+.introjs-disabled{
+    background:@soft_grey !important;
+    border-color:@soft_grey !important;
+}
+.introjs-disabled:hover{
+    background:@soft_grey !important;
+    border-color:@soft_grey !important;
+}
+
+
+/* ----------------------- CK EDITOR ----------------------- */
+
+.cke_top, .cke_bottom{
+    background:#F5F5F5;  
+}
+*[contenteditable="true"] {
+	padding: 10px;
+}
+.cke_editable.cke_editable_inline {
+	cursor: pointer;
+}
+.cke_editable.cke_editable_inline.cke_focus {
+	background: none repeat scroll 0 0 #eee;
+	box-shadow: 0 0 20px 3px #ddd inset, 0 0 1px #000 inset;
+	cursor: text;
+	outline: medium none;
+}
+
+
+/* ----------------------- GOOGLE MAPS ----------------------- */
+
+.gm-style img{
+    max-width: none;
+}

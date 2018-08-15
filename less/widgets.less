@@ -1,0 +1,366 @@
+/*
+ * 4. WIDGETS CSS
+ * Description: Custom Widgets CSS
+ */
+ 
+ 
+/*---   Panel & Widget  ---*/
+.widget {
+  .clearfix();
+  .box-shadow(0 1px 1px rgba(0, 0, 0, 0.05));
+  .border-radius(2px);
+  position:relative;
+}
+
+[data-rel^="sortable"] .widget:hover{
+    cursor:  move;
+}
+
+.widget .vd_panel-menu{
+    right: 15px;
+    top:6px;
+    .menu{
+        border:none;
+        line-height:22px;
+        margin-right:2px;
+        color:#F0F0F0;
+        font-size:12px;
+        height:24px;
+        width:22px;
+    }
+    > .entypo-icon{
+        font-size:18px;
+        line-height:26px;
+    }
+    > .smaller-font{
+        font-size:14px;
+    }
+    > .menu:hover, > .menu.active {
+        background-color: rgba(0,0,0,.4);
+        color:#FFFFFF;
+    }
+    .child-menu{
+        font-size: @body_text_size;
+    }
+}
+.light-widget{
+    .panel-heading{
+        background:#FFFFFF;
+        .panel-title{
+            color:#888888;
+        }
+    }
+    .vd_panel-menu{
+        .menu{
+            color:@soft_grey;
+        }
+    }
+    .bordered{
+        border-bottom:1px solid #EEEEEE;        
+    }
+}
+.dark-widget{
+    color:#FFF;
+    .bordered{
+        border-bottom:1px solid #F5F5F5;
+    }
+}
+.light-widget, .dark-widget{
+    .bordered{
+        padding-top:9px;
+        padding-bottom:9px; 
+        margin-left:-1px;
+        margin-right:-1px;        
+    }
+}
+.panel-bd-left{
+    border-left:3px solid @main_color;
+}
+.panel-bd-top{
+    border-top:3px solid @main_color;
+}
+
+/* Specific Widget Mega Menu */
+.widget .vd_panel-menu .menu .vd_mega-menu-content{
+    margin-top:5px;
+    margin-left:-13px;
+}
+.widget .vd_panel-menu .menu{
+    .vd_mega-menu-content.left-xs, .vd_mega-menu-content.left-sm, .vd_mega-menu-content.left-md,.vd_mega-menu-content.left-lg{
+        margin-left:auto;
+        margin-right:-13px;
+    }
+}
+
+
+/* Search Form */
+.vd_menu-search{
+    width: 300px;
+    background:#FFF;
+    padding:2px 0 2px 13px;
+    margin-left: 3px;
+    font-size: 12px;
+    margin-top:18px;
+    position:relative;
+    .border-radius(30px);
+    .vd_menu-search-text{
+        border:none;
+        color:#444;
+        padding:0;
+    }    
+    .vd_menu-search-category{
+         margin-right:10px;   
+         position:relative;
+         display:inline-block;
+        .separator{
+            border-left:1px dotted #333; 
+            margin-right:8px;   
+            height: 16px; 
+            margin-bottom: -3px; 
+            display:inline-block;
+        }
+        .text{
+            margin-right:6px;
+        }
+       .vd_mega-menu-content{
+            top:22px;
+            border-top:1px solid #DDD;
+
+            label{
+                font-weight:normal;
+                input {
+                    margin-right:10px;
+                }
+            }
+        }
+        .vd_mega-menu-content:before{
+            display:none;
+        }
+    }
+    .vd_menu-search-category:hover{
+            cursor:pointer;        
+    }   
+    .vd_menu-search-submit{
+        position:absolute;
+        top:0;
+        right:0;
+        background:@main_color;
+        color:#FFF;
+        padding: 2px 8px;   
+        .border-radius(30px);
+    }
+    .vd_menu-search-submit:hover{
+        cursor:pointer;
+        background-color:lighten(@main_color,5%);
+    }    
+}
+.menu-search-style-2{
+    .vd_menu-search {
+        margin-left: 18px;
+        margin-top: 16px;
+        padding: 4px 0 4px 13px;
+        .vd_menu-search-submit{
+            padding: 4px 10px;
+            right:-2px;
+        }
+    }
+}
+
+
+/*  Chat Widget  */
+.vd_chat-menu{ 
+    position:fixed;
+    bottom:0;
+    right:10%;
+    z-index: 9;
+    background-color: #39515F;
+    border-top:3px solid #333333;   
+//    .box-shadow(0 1px 0 rgba(255, 255, 255, 0.5) inset);
+    .vd_mega-menu-wrapper{
+         .vd_mega-menu >ul{
+            > .mega-li{     
+                 height:50px;
+                 >a{
+                     color:#FFFFFF;
+                 }
+                 .mega-link{
+                     line-height:24px;
+                     margin-top:-4px;
+                     border:none;
+                 }
+            }
+            > li.profile{
+                margin-top:0;
+                margin-right: 0;
+                .mega-name{
+                    margin-top:1px;
+                }        
+            }
+            > li.profile:hover{
+                background: rgba(0,0,0,.4);
+            }
+            > li.one-big-icon{
+                padding-top:10px;
+            }
+            > li.one-icon{
+                padding-top:8px;
+            }
+            > li:last-child{
+                margin-left: 0;
+            }
+            .bordered{
+                  border-left: 1px solid rgba(0,0,0,.2);
+                  border-right: 1px solid rgba(0,0,0,.2);                  
+//                box-shadow: 1px 0 0 rgba(255, 255, 255, 0.5) inset;
+            }
+            
+         }
+         .chat-area{
+             border-top: 1px solid #F5F5F5;
+             .chat-box input{
+                 border:none;
+                 padding:10px 65px 10px 10px;
+             }
+             .vd_panel-menu{
+                 top:6px;
+                 right: 8px;
+                 .menu{
+                    border:none;
+                    color:#666;
+                 }
+             }
+         }
+    }        
+}
+
+/*  Status Widget  */
+.vd_status-widget{
+        a{
+            display:block;
+            color:#F0F0F0;  
+            padding:20px;            
+        }
+        a:hover{
+            color:#FFF;
+            background: rgba(0,0,0,.1);
+        }
+        .menu-icon{
+            display:block;
+            font-size:48px;
+            float:left;
+            line-height:56px;
+        }
+        .menu-value{
+            margin-left:25px;
+            line-height:56px;
+            font-size: 36px;
+        }          
+        .menu-text{
+            padding-top:10px;
+            font-size: 16px;
+            letter-spacing:.2px;
+            text-transform:uppercase;
+        }    
+}
+
+/* Interactive Chart Widget  */
+.vd_interactive-widget{
+    .item-left, .item-right{
+        padding:15px;
+        border-top:1px solid #EAEAEA;
+    }
+    .item-left{
+        margin-right:-15px; border-right:1px solid #EAEAEA;
+    }
+    .item-right{
+        margin-left:-15px;  
+    }
+}
+
+/*  Text Area Menu  */
+.vd_textarea-menu{
+    .nav-pills > li > a{
+        .border-radius(0px);  
+       color:#FFFFFF !important; 
+       padding: 5px 10px 7px !important;
+
+       .menu-icon{
+          margin-right:0 !important;
+       }
+    }
+    .nav-pills > li:hover > a, .nav-pills > li:hover{
+        background:rgba(0,0,0,.1) !important;
+    }
+}
+
+/*  Weather Widget  */
+.vd_weather-widget{
+    .weather-degree{
+        font-size:60px;
+    }
+    .weather-icon{
+        position:absolute; top:20px; right:20px;
+    }
+    .weather-subinfo{
+        font-size:44px;
+        text-align:center;
+        margin-top:15px;
+        margin-bottom:15px;
+        .wind-value{
+            line-height: 10px;
+        }
+        .wind-text{
+            font-size:32px;
+        }
+    }    
+}
+
+
+
+/*  Testimonial Widget  */
+.vd_testimonial{
+    position:relative; 
+    .caret-icon{
+        position:absolute; top:-14px; left:144px; color:rgba(0,0,0,.2);
+background:url(../img/banner/caret-testimonial.png) no-repeat; display:block; width: 31px; height:14px;        
+    }
+    .testimonial-word-wrapper{
+        background:rgba(0,0,0,.2);
+        padding: 25px;
+        color:#FFFFFF;
+        position:relative;
+        border-radius: 10px;
+    }
+    .vd_carousel-control{
+        position:absolute; right:0; top:60px; z-index:10;
+        a{
+            color:white; background:rgba(0,0,0,.3); padding: 10px 15px; margin-right:5px; border-radius:30px; 
+        }
+        a:hover{
+            background:rgba(0,0,0,.5);
+        }
+    }  
+    .testimonial-word{background:url(../img/icons/quote-big.png) no-repeat top left; padding-left:70px; padding-top:10px;}    
+}
+
+.vd_carousel-column{
+    float:left;
+} 
+.vd_section{
+    padding-top:100px;
+    padding-bottom:100px;
+}
+
+/*  News Widget  */
+.vd_news-widget {
+ .vd_carousel-control{
+     position:absolute; top:4px; left:0px; z-index:9;
+     a{background:rgba(255,255,255,.2); color:rgba(0,0,0,.2); padding:8px 15px; font-size:14px;}
+     a:hover{background:rgba(255,255,255,.4);}
+  }   
+}
+
+
+
+
+

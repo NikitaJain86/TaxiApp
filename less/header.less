@@ -1,0 +1,36 @@
+/*
+ * 7. HEADER CSS
+ * Description: Header CSS
+ */
+ 
+header {
+    height:@header_height;
+	z-index: 999;    
+    .vd_top-menu-wrapper{
+        background-color:@header_bg;
+        width:100%;
+	    z-index: 999;          
+	    position:absolute;
+       .box-shadow(0px -2px 4px rgba(50, 50, 50, 0.75)) ;       
+    }
+    .vd_top-nav .vd_panel-header .logo{
+        float:left;
+        a{
+            margin-top:17px;
+            width:120px;
+            display:inline-block;                
+        }
+    }     
+    .vd_container{
+        height: @header_height;
+    }
+}
+/* Sticky Menu Header */
+body.sticky-menu-active header {
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	left:0px;
+}
+
+

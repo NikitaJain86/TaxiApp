@@ -1,0 +1,28 @@
+[07-Jul-2015 04:33:37 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'm using iChat...',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8' at line 15' in /home/icanstud/public_html/chat/install/index.php:48
+Stack trace:
+#0 /home/icanstud/public_html/chat/install/index.php(48): PDOStatement->execute(Array)
+#1 /home/icanstud/public_html/chat/install/index.php(117): Install->query('\nCREATE TABLE I...')
+#2 /home/icanstud/public_html/chat/install/index.php(86): Install->insertSQL()
+#3 /home/icanstud/public_html/chat/install/index.php(78): Install->existingTables()
+#4 /home/icanstud/public_html/chat/install/index.php(62): Install->dbLink()
+#5 /home/icanstud/public_html/chat/install/index.php(36): Install->validate()
+#6 /home/icanstud/public_html/chat/install/index.php(18): Install->__construct()
+#7 {main}
+  thrown in /home/icanstud/public_html/chat/install/index.php on line 48
+[16-Jul-2015 05:42:44 UTC] PHP Parse error:  syntax error, unexpected '||' (T_BOOLEAN_OR), expecting ')' in /home/icanstud/public_html/newshive/install/index.php on line 57
+[16-Jul-2015 05:43:04 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/icanstud/public_html/newshive/install/index.php on line 57
+[16-Jul-2015 05:49:18 UTC] PHP Fatal error:  Cannot use [] for reading in /home/icanstud/public_html/newshive/install/index.php on line 69
+[16-Jul-2015 05:54:47 UTC] PHP Fatal error:  Call to undefined function move_uploaded_files() in /home/icanstud/public_html/newshive/install/index.php on line 69
+[24-Jul-2015 13:45:35 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000]: General error: 1005 Can't create table 'icanstud_newshiveAndroid.#sql-66cd_23d' (errno: 121)' in /home/icanstud/public_html/newshive_android/install/index.php:48
+Stack trace:
+#0 /home/icanstud/public_html/newshive_android/install/index.php(48): PDOStatement->execute(Array)
+#1 /home/icanstud/public_html/newshive_android/install/index.php(222): Install->query('ALTER TABLE `ne...')
+#2 /home/icanstud/public_html/newshive_android/install/index.php(87): Install->insertSQL()
+#3 /home/icanstud/public_html/newshive_android/install/index.php(79): Install->existingTables()
+#4 /home/icanstud/public_html/newshive_android/install/index.php(62): Install->dbLink()
+#5 /home/icanstud/public_html/newshive_android/install/index.php(36): Install->validate()
+#6 /home/icanstud/public_html/newshive_android/install/index.php(18): Install->__construct()
+#7 {main}
+  thrown in /home/icanstud/public_html/newshive_android/install/index.php on line 48

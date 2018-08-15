@@ -1,0 +1,376 @@
+/* 2. APPLICATION RESPONSIVE CSS */
+@media (max-width: 991px) {
+    header{
+        .vd_top-menu-wrapper{
+            position:relative;
+        }
+        .vd_top-nav{
+            width:100%;
+            display:block;
+            position:relative;
+            padding-left:@container_padding;
+            padding-right:@container_padding;
+            .vd_panel-header .logo{
+                float:none;
+                text-align:center;
+            }
+        }
+        .vd_container{
+//            border-top:1px solid #333;
+            margin-left:0;
+            margin-right:0;
+            padding-left:@container_padding;
+            padding-right:@container_padding;
+            .vd_menu-search{
+                margin-left:0;
+            }            
+        }
+        .container{
+            padding-left:0;
+            padding-right:0;
+        }
+        .vd_top-nav{
+            padding-left:@container_padding;
+            padding-right:@container_padding;
+        }
+
+    }
+
+    .nav-left-hide {
+        .content .vd_content-wrapper .vd_container{
+            margin-left:0;
+        }
+    }
+    .nav-right-hide {
+        .content .vd_content-wrapper .vd_container{
+            margin-right:0;
+        }
+    }  
+    .vd_mega-menu-wrapper.horizontal-menu .vd_mega-menu{
+        > ul > li{
+            padding-left: 10px;
+            padding-right:10px;
+        }
+    }    
+    .vd_visitor-counter{
+            .item{
+                width: 60px;
+                height: 76px;
+                line-height: 76px;
+                font-size: 56px;
+                .line{
+                    width:60px;
+                }
+            }            
+    }
+    #front-1-banner{
+        .vd_content{
+            height:auto;
+        }
+        .icon-banner{
+            position:relative;
+            top: auto;
+            left:auto;
+            text-align:center;
+        }
+        .icon-1{
+            margin-top:40px;
+        }
+        .icon-2{
+            margin-top:30px;
+        }
+        .icon-3{
+            margin-top:30px;
+        }
+        .icon-4{
+            margin-top:50px;
+            margin-bottom:75px;
+        }        
+         
+    }      
+
+
+}
+@media (max-width: 767px) {
+    header{
+        height:auto;
+        .vd_top-nav{
+            height:@header_height;
+        }
+        .vd_container{
+            display:none;
+            height:auto;
+            .vd_menu-search{
+                margin-left:auto;
+                margin-right:auto;
+            }
+            .col-xs-12{
+                margin-bottom:10px;
+            }
+        }
+    }    
+    .submenu header .vd_container{
+        display:block;
+    }
+    body .affix, body .affix-top, body .affix-bottom{
+        position:static !important;
+    }    
+   .nav-left-hide .content .vd_container{
+        float:right;
+        min-width:717px;
+   } 
+   .nav-right-hide .content .vd_container{
+        float:left;        
+        min-width:717px;
+   }    
+    .nav-left-hide.nav-right-hide .content .container .vd_container{
+        float:none;
+        min-width:inherit;
+    }
+
+
+    .fc{
+        .fc-header-title h2{
+            font-size: 26px;
+        }
+    }
+    .login-layout{ 
+        .vd_register-page, .vd_login-page  {
+            width:100%;
+        }
+    }
+    .vd_visitor-counter{
+            .item{
+                width: 46px;
+                height: 60px;
+                line-height: 60px;
+                font-size: 46px;
+                .line{
+                    width:46px;
+                }
+                margin-bottom:10px;
+            }            
+    } 
+    .vd_interactive-widget{
+        .item-left, .item-right{
+            border-top:none;
+        }
+        .item-left{
+            margin-right:0; border-right:none;
+        }
+        .item-right{
+            margin-left:0;  
+        }
+    }  
+    .content-blog-small, .content-blog-large{
+        .list-wrapper > li{
+            .menu-icon{
+                float:none;
+                display:block;
+                margin:0 auto 10px; 
+                width:100%;
+            }
+            .menu-text{
+                margin-left:0;
+                text-align:center;
+            }
+        }
+    }      
+}
+
+@media (max-width: 480px){
+    /* Specific CSS */
+    .vd_status-widget{ 
+        .menu-value{
+            font-size:24px;
+            margin-left:15px;
+        }
+        .menu-icon{
+            font-size:36px;
+        }
+    }	
+    .fc{
+        .fc-header-title h2{
+            font-size: 20px;
+        }
+    }  
+    #fullcalendar .fc-header-left{
+        .fc-button-prev, .fc-button-next{
+            line-height:18px;
+            height:22px;
+            width:22px;
+            position:absolute;
+            top:-9px;
+
+        }
+        .fc-button-prev{
+            left: 20px;
+        }
+        .fc-button-next{
+            left: 68px;
+        }
+        
+        .fc-button .fc-icon{
+            font-size: 1.8em;
+        }
+    }
+    #fullcalendar .fc-header .fc-header-right{
+        .fc-button-today{
+            top: 47px;
+        }
+    }
+
+    .vd_visitor-counter{
+            .item{
+                width: 30px;
+                height: 46px;
+                line-height: 46px;
+                font-size: 30px;
+                .line{
+                    width:30px;
+                }
+                margin-bottom:10px;
+            }            
+    }   
+
+}
+@media (max-width: 320px){
+
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    header{
+        height: @header_height + @top_nav_responsive_sm_height ;
+        .vd_top-nav{
+            height:@top_nav_responsive_sm_height;
+            .vd_panel-header .logo{
+                margin-top:0;
+            }            
+            .vd_panel-menu{
+                top:16px;
+            }            
+        }    
+    }    
+
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+
+
+    /* Specific CSS */
+    .vd_status-widget{ 
+        .menu-value{
+            font-size:24px;
+            margin-left:15px;
+        }
+        .menu-icon{
+            font-size:36px;
+        }
+    }	
+
+    
+    #front-1-banner{
+        .icon-banner{
+            position:absolute;
+        }
+        .icon-1{
+            top:222px;
+            left: 208px;
+        }
+        .icon-2{
+            top:170px;
+            left: 344px;
+        }
+        .icon-3{
+            top:203px;
+            left: 648px;
+        }
+        .icon-4{
+            top:230px;
+            left: 412px;
+        }    
+        .word-1{
+            top:215px;
+            left: 85px;
+        }
+        .word-2{
+            top:152px;
+            left: 438px;
+        }
+        .word-3{
+            top:178px;
+            left: 746px;
+        }
+         
+    }        
+}
+
+@media (min-width: 1200px) {
+	
+}
+
+/*Body Boxed Special Requirement*/
+@media (min-width: 1200px) and (max-width: 1260px){
+	body.boxed-layout{ 
+	    .vd_body	{
+    		width:100%;
+    		border:none;
+    		float:left;
+    		border-radius:0;
+	    }
+	    .vd_bottom .vd_footer-line, .vd_bottom .bg{
+    		margin-left:-10px;
+    		margin-right:-10px;	        
+	    }
+	}
+}
+
+@media (min-width: 992px) and (max-width: 1016px){
+	body.boxed-layout{    
+    	.vd_body	{
+    		width:100%;
+    		border:none;
+    		float:left;
+    		border-radius:0;
+    	}
+    	.vd_bottom .vc_footer-line, .vd_bottom .bg{
+    		margin-left:-10px;
+    		margin-right:-10px;
+    	}	
+	}
+}
+@media (max-width: 767px){
+	body.boxed-layout{		
+		.vd_body	{
+    		width:100%;
+    		float:left;
+    		margin:0;
+    		border:none;	    
+		}
+    header{
+        margin-top:0px;
+        .vd_top-menu-wrapper{
+            .container{
+                -webkit-border-top-left-radius: 0px;
+                -webkit-border-top-right-radius: 0px;
+                -moz-border-radius-topleft: 0px;
+                -moz-border-radius-topright: 0px;
+                border-top-left-radius: 0px;
+                border-top-right-radius: 0px;               
+            }
+        }
+    }
+    footer{ 
+        margin-bottom:0px;       
+        .vd_bottom{
+            .container{
+                -webkit-border-top-left-radius: 0px;
+                -webkit-border-top-right-radius: 0px;
+                -moz-border-radius-topleft: 0px;
+                -moz-border-radius-topright: 0px;
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;               
+            }
+        }
+    }		
+		
+	}
+}
